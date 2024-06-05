@@ -12,7 +12,6 @@ interface CardPricingProps {
 export const CardPricing = (props: CardPricingProps) => {
   return (
     <Card
-      maxW="sm"
       bg="tomato"
       borderRadius={5}
       p={4}
@@ -30,7 +29,7 @@ export const CardPricing = (props: CardPricingProps) => {
           <Box display="flex" alignItems="baseline">
             <h2 className="text-4xl font-bold">
               {" "}
-              {props.price == 0 ? "Free" : props.price}
+              {props.price == 0 ? "Free" : "$" + props.price}
             </h2>
             {props.price != 0 ? <p>/month</p> : ""}
           </Box>
