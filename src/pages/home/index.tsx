@@ -1,7 +1,8 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { CardPricing } from "../../components/CardPricing";
 import { Carousel } from "../../components/Carousel";
-import { TestimonialCard } from "../../components/FeaturesCard";
+import { FeaturesCard } from "../../components/FeaturesCard";
+import { TestimonialCard } from "../../components/TestimonialCard";
 
 export const Home = () => {
   return (
@@ -57,11 +58,12 @@ export const Home = () => {
       <section className="flex items-center justify-center h-screen p-20 align-middle">
         <Box>
           <h1 className="text-4xl text-orange-600 font-bold mb-10 text-center">Features</h1>
-          <TestimonialCard />
+          <FeaturesCard />
         </Box>
       </section>
-      <section className="flex items-center justify-center h-screen">
-        <h1 className="text-4xl text-orange-600 font-bold">Testimonial</h1>
+      <section className="lex items-center justify-center h-screen p-20 align-middle">
+        <h1 className="text-4xl text-orange-600 font-bold mb-10 text-center">Testimonial</h1>
+        {/* <TestimonialCard /> */}
       </section>
     </div>
   );

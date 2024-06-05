@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-export const TestimonialCard = () => {
+export const FeaturesCard = () => {
   const content = [
     {
       image: "./image1.jpg",
