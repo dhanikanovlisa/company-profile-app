@@ -1,0 +1,58 @@
+import { Box, Card, CardBody, Flex } from "@chakra-ui/react";
+import { FaCheckCircle } from "react-icons/fa";
+import { Button } from "@chakra-ui/react";
+
+interface CardPricingProps {
+  title: string;
+  description: string;
+  price: number;
+  features: string[];
+}
+
+export const CardPricing = (props: CardPricingProps) => {
+  return (
+    <>
+      <Card
+        maxW="sm"
+        bg="tomato"
+        borderRadius={5}
+        p={4}
+        padding={10}
+        boxShadow="0px 10px 20px rgba(0, 0, 0, 0.1)"
+      >
+        <CardBody alignContent='center' display="flex" flexDirection="column">
+          <Box padding={10} textAlign="left">
+            <h3 className="font-bold">{props.title}</h3>
+            <Box display="flex" alignItems="baseline">
+              <h2 className="text-4xl font-bold">
+                {" "}
+                {props.price == 0 ? "Free" : props.price}
+              </h2>
+              {props.price != 0 ? <p>/month</p> : ""}
+            </Box>
+            <p>{props.description}</p>
+          </Box>
+
+          <Box padding={10}>
+            {props.features.map((feature, index) => (
+              <Flex key={index} alignItems="baseline">
+                <FaCheckCircle />
+                <p className="ml-2">{feature}</p>
+              </Flex>
+            ))}
+          </Box>
+          <Button
+            bg="#ffffff"
+            color="tomato"
+            alignSelf="center"
+            paddingX={20}
+            paddingY={4}
+            borderRadius={5}
+          >
+            Button
+          </Button>
+        </CardBody>
+      </Card>
+    </>
+  );
+};
